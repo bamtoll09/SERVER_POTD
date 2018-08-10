@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	h1= title
+	p #{title}...
+
+	form(action='/cloths/save', method='post', enctype='multipart/form-data')
+		| Category: 
+        input(type='number', name='category')
+        br
+        | Name: 
+		input(type='text', name='name')
+		br
+		| Description: 
+		input(type='text', name='description')
+		br
+		| Images: 
+		input(type='file', name='images', accept='image/*', multiple='true')
+		br
+        | Cost: 
+        input(type='number', name='cost')
+        br
+		| Style: 
+		input(type='number', name='style')
+		br
+        | Size: 
+        input(tyep='number', name='size', min='0', max='31')
+        br
+		input(type='submit', value='Submit')
+        

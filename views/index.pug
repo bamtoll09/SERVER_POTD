@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action='/shops/search', method='get')
+    input(type='text' name='name_shop')
+    button(type='submit') search
+    
+  form(action='/shops', method='get')
+    button(type='submit') shop
+    //- button(type='submit' formaction='/shops/load') load
+    button(type='submit' formaction='/shops/load_all') load_all
+
+  form(action='/cloths', method='get')
+    button(type='submit') cloth
